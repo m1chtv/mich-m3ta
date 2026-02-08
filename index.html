@@ -1,315 +1,1493 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MaxGamingIR Shop</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&family=Fredoka:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <title>m3ta - اشتراک‌های رفع تحریم گیمینگ پرسرعت</title>
+    <meta name="description" content="تجربه گیمینگ حرفه‌ای با رفع تحریم پرسرعت. بهترین پینگ، سرورهای اختصاصی و پشتیبانی ۲۴/۷ برای گیمرهای ایرانی." />
+    <meta name="keywords" content="رفع تحریم گیمینگ, اشتراک رفع تحریم, رفع تحریم, پینگ پایین, گیم آنلاین" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+    
     <style>
-      :root {
-        --purple: #a855f7;
-        --bg: #0e0e17;
-        --glass: rgba(255, 255, 255, 0.05);
-        --border: rgba(255, 255, 255, 0.1);
-        --radius: 20px;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: "Fredoka", "Vazirmatn", sans-serif;
-        scroll-behavior: smooth;
-      }
-
-      body {
-        background: linear-gradient(135deg, #1a1a2e, #0e0e17);
-        color: #fff;
-        padding: 2rem;
-      }
-
-      .window {
-        background: var(--glass);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        backdrop-filter: blur(16px);
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-        overflow: hidden;
-      }
-
-      .mac-header {
-        background: rgba(255, 255, 255, 0.07);
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.7rem 1rem;
-      }
-
-      .mac-header .dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-      }
-      .red {
-        background: #ff5f57;
-      }
-      .yellow {
-        background: #ffbd2e;
-      }
-      .green {
-        background: #28c840;
-      }
-
-      section {
-        padding: 4rem 2rem;
-        margin: 2rem 0;
-      }
-
-      h2 {
-        font-size: 2.2rem;
-        color: var(--purple);
-        text-align: center;
-        margin-bottom: 2rem;
-        text-shadow: 0 0 10px var(--purple);
-      }
-
-      .hero {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        align-items: center;
-        justify-content: center;
-        text-align: right;
-      }
-
-      .hero img {
-        width: 180px;
-        animation: float 5s ease-in-out infinite;
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
+        :root {
+            --primary: #00d4ff;
+            --primary-dark: #0095ff;
+            --primary-light: #6ee7ff;
+            --secondary: #ff3e80;
+            --secondary-light: #ff6ba3;
+            --dark: #0a0a1a;
+            --dark-light: #1a1a2e;
+            --darker: #050510;
+            --light: #f0f8ff;
+            --gray: #8a8aa3;
+            --success: #00ff9d;
+            --warning: #ffcc00;
+            --danger: #ff4757;
+            --glass: rgba(255, 255, 255, 0.08);
+            --glass-dark: rgba(10, 10, 26, 0.85);
+            --border: rgba(0, 212, 255, 0.15);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 25px 50px rgba(0, 0, 0, 0.5);
+            --radius: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
         }
-        50% {
-          transform: translateY(-12px);
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      }
 
-      .hero-text {
-        max-width: 600px;
-        font-size: 1.2rem;
-        color: #ccc;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-
-      .card {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 2rem;
-        text-align: center;
-        backdrop-filter: blur(10px);
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-10px) scale(1.03) rotate(-1deg);
-        box-shadow: 0 8px 25px rgba(168, 85, 247, 0.6);
-      }
-
-      .card i {
-        font-size: 2.5rem;
-        color: var(--purple);
-        margin-bottom: 1rem;
-      }
-
-      .card h3 {
-        font-size: 1.3rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .card p {
-        font-size: 0.95rem;
-        color: #aaa;
-      }
-
-      .price,
-      .volume {
-        margin-top: 0.8rem;
-        font-weight: bold;
-        color: #fff;
-        font-size: 1rem;
-      }
-
-      .about {
-        text-align: center;
-        color: #bbb;
-        max-width: 800px;
-        margin: auto;
-        font-size: 1rem;
-      }
-
-      .contact-btn {
-        margin-top: 2rem;
-        display: inline-block;
-        background: var(--purple);
-        padding: 0.8rem 1.8rem;
-        border-radius: 12px;
-        color: white;
-        text-decoration: none;
-        font-size: 1rem;
-        transition: background 0.3s, transform 0.3s;
-      }
-
-      .contact-btn:hover {
-        background: #9333ea;
-        transform: scale(1.05);
-      }
-
-      footer {
-        text-align: center;
-        font-size: 0.85rem;
-        padding: 2rem 1rem;
-        color: #666;
-      }
-
-      #mich {
-        padding: 4rem 2rem;
-        margin: 2rem;
-        border-radius: var(--radius);
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid var(--border);
-      }
-
-      @media (max-width: 768px) {
-        .grid {
-          grid-template-columns: 1fr;
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
         }
+
+        body {
+            font-family: 'Vazirmatn', 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 50%, var(--dark-light) 100%);
+            color: var(--light);
+            line-height: 1.7;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Background Effects */
+        .bg-effects {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+
+        .gradient-circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.4;
+        }
+
+        .circle-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+            bottom: -150px;
+            left: -150px;
+            animation: float 25s infinite ease-in-out reverse;
+        }
+
+        .grid-pattern {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.2rem 2rem;
+            background: var(--glass-dark);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            padding: 0.8rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            background: rgba(0, 212, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .logo:hover .logo-icon {
+            transform: rotate(15deg) scale(1.1);
+            background: rgba(0, 212, 255, 0.2);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
+
+        .logo-subtitle {
+            font-size: 0.8rem;
+            color: var(--gray);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::before {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Hero Section */
         .hero {
-          flex-direction: column;
-          text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            position: relative;
+            overflow: hidden;
         }
-      }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            color: var(--dark);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 212, 255, 0); }
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, var(--light) 30%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-title span {
+            color: var(--primary);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin: 2.5rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 0.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .main-image {
+            width: 100%;
+            filter: drop-shadow(0 20px 40px rgba(0, 212, 255, 0.3));
+            animation: float-image 8s ease-in-out infinite;
+        }
+
+        @keyframes float-image {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .floating-icon {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary);
+            animation: float-around 15s infinite linear;
+        }
+
+        .floating-icon:nth-child(1) {
+            top: 10%;
+            right: 0;
+            animation-delay: 0s;
+        }
+
+        .floating-icon:nth-child(2) {
+            top: 60%;
+            left: 0;
+            animation-delay: -5s;
+        }
+
+        .floating-icon:nth-child(3) {
+            bottom: 20%;
+            right: 10%;
+            animation-delay: -10s;
+        }
+
+        @keyframes float-around {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(20px, -20px) rotate(90deg); }
+            50% { transform: translate(0, -40px) rotate(180deg); }
+            75% { transform: translate(-20px, -20px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2.2rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .btn:hover::before {
+            transform: translateX(100%);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--dark);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--glass);
+            color: var(--light);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--dark);
+        }
+
+        .btn-sm {
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 2rem auto;
+            max-width: 1200px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-subtitle {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            background: linear-gradient(90deg, var(--light), var(--primary-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .section-description {
+            color: var(--gray);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Products Section */
+        .products {
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 212, 255, 0.03) 100%);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            background: linear-gradient(90deg, var(--secondary), var(--secondary-light));
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            background: rgba(0, 212, 255, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--light);
+        }
+
+        .product-description {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .product-features li {
+            padding: 0.5rem 0;
+            color: var(--light);
+            position: relative;
+            padding-right: 1.8rem;
+        }
+
+        .product-features li::before {
+            content: '✓';
+            position: absolute;
+            right: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .product-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .product-price span {
+            font-size: 1rem;
+            color: var(--gray);
+            font-weight: 400;
+        }
+
+        .product-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 3rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-avatar::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: conic-gradient(transparent, var(--primary), transparent 30%);
+            animation: rotate 3s linear infinite;
+        }
+
+        .team-avatar-inner {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+
+        .team-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--light);
+        }
+
+        .team-role {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .team-description {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(180deg, rgba(0, 212, 255, 0.03) 0%, transparent 100%);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-method {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius);
+            min-width: 200px;
+            transition: var(--transition);
+        }
+
+        .contact-method:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--light);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-right: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: var(--glass);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: var(--dark);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: 3.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                flex-direction: column;
+                background: var(--glass-dark);
+                backdrop-filter: blur(20px);
+                width: 100%;
+                padding: 2rem;
+                border-top: 1px solid var(--border);
+                transition: right 0.3s ease;
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-cta {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-buttons {
+                flex-direction: column;
+            }
+            
+            .contact-container {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 0.8rem 1.5rem;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .product-card {
+                padding: 2rem;
+            }
+            
+            .contact-methods {
+                flex-direction: column;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
-  </head>
-  <body>
-    <div class="window">
-      <div class="mac-header">
-        <div class="dot red"></div>
-        <div class="dot yellow"></div>
-        <div class="dot green"></div>
-      </div>
-
-      <!-- HERO -->
-      <section class="hero" id="mich">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/2231/2231002.png"
-          alt="VPN Icon"
-        />
-        <div class="hero-text">
-          <h1>🧿 اشتراک‌های مکس گیمینگ</h1>
-          <p>
-            دنیایی بدون محدودیت و با سرعت نور تجربه کن! با رفع تحریم مکس گیمینگ
-            دنیای آنلاین همیشه در دسترسه.
-          </p>
-        </div>
-      </section>
-
-      <!-- PRODUCTS -->
-      <section>
-        <h2>🛡️ پلن‌های اشتراک</h2>
-        <div class="grid">
-          <div class="card">
-            <i class="fas fa-shield-alt"></i>
-            <h3>اشتراک نقره‌ای</h3>
-            <p>برای شروع جادوی سرعت و امنیت 🔓</p>
-            <div class="volume">حجم: 30 گیگ تک کاربر</div>
-            <div class="price">69,000 تومان</div>
-
-            <div class="volume">حجم: 35 گیگ دو کاربر</div>
-            <div class="price">79,000 تومان</div>
-          </div>
-          <div class="card">
-            <i class="fas fa-crown"></i>
-            <h3>اشتراک طلایی</h3>
-            <p>دسترسی بی‌نهایت به سرورهای ویژه 💎</p>
-            <div class="volume">حجم: 50 گیگ تک کاربر</div>
-            <div class="price">89,000 تومان</div>
-
-            <div class="volume">حجم: 55 گیگ دو کاربر</div>
-            <div class="price">99,000 تومان</div>
-          </div>
-          <div class="card">
-            <i class="fas fa-gamepad"></i>
-            <h3>اشتراک پلاتین</h3>
-            <p>پینگ پایین، بدون لگ و قطع‌شدن 🎮</p>
-            <div class="volume">حجم: 70 گیگ تک کاربر</div>
-            <div class="price">109,000 تومان</div>
-
-            <div class="volume">حجم: 75 گیگ دو کاربر</div>
-            <div class="price">119,000 تومان</div>
-          </div>
-          <div class="card">
-            <i class="fas fa-infinity"></i>
-            <h3>اشتراک دایمند</h3>
-            <p>سرعت نور 🌍</p>
-
-            <div class="volume">حجم: نامحدود تک کاربر</div>
-            <div class="price">180,000 تومان</div>
-
-            <div class="volume">حجم: نامحدود دو کاربر</div>
-            <div class="price">210,000 تومان</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TEAM -->
-      <section>
-        <h2>👾 اعضای تیم</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>میچ</h3>
-            <p>برنامه‌نویس، دیزاینر و جادوگر اصلی سیستم</p>
-          </div>
-          <div class="card">
-            <h3>امین</h3>
-            <p>پشتیبانی + vibes مثبت</p>
-          </div>
-          <div class="card">
-            <h3>علیرضا</h3>
-            <p>تست گیمینگ + پشتیبانی</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="mich">
-        <h2>📜 درباره ما</h2>
-        <div class="about">
-          تیم ما ساخته شده برای عبور از تحریم‌ها و محدودیت‌های اینترنت. هدف ما،
-          تجربه‌ای روونه، امن و بدون دردسره!<br />
-          <a class="contact-btn" href="https://t.me/SSVPN1945" target="_blank"
-            >تماس با ما در تلگرام</a
-          >
-        </div>
-      </section>
-
-      <footer>© 2025 تیم مکس گیمینگ — با عشق از طرف میچ</footer>
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="bg-effects">
+        <div class="gradient-circle circle-1"></div>
+        <div class="gradient-circle circle-2"></div>
+        <div class="grid-pattern"></div>
     </div>
-  </body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-title">m3ta</div>
+                    <div class="logo-subtitle">Best For The Best</div>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">خانه</a></li>
+                <li><a href="#products">پلن‌ها</a></li>
+                <li><a href="#team">تیم</a></li>
+                <li><a href="#about">درباره ما</a></li>
+                <li><a href="#contact">تماس</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="https://t.me/ToPoLsuport" class="btn btn-primary btn-sm">
+                    <i class="fas fa-headset"></i>
+                    پشتیبانی
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-bolt"></i>
+                    پینگ پایین، سرعت بالا
+                </div>
+                
+                <h1 class="hero-title">
+                    دنیای <span>گیمینگ</span><br>
+                    بدون محدودیت
+                </h1>
+                
+                <p class="hero-description">
+                    با سرویس رفع تحریم اختصاصی ما، بهترین تجربه گیمینگ آنلاین را داشته باشید. 
+                    سرورهای اختصاصی در موقعیت‌های استراتژیک برای کمترین پینگ و بیشترین سرعت.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">۲۴/۷</div>
+                        <div class="stat-label">پشتیبانی آنلاین</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">۹۹%</div>
+                        <div class="stat-label">آپتایم سرویس</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">۵۰+</div>
+                        <div class="stat-label">سرور فعال</div>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                        مشاهده پلن‌ها
+                    </a>
+                    <a href="https://t.me/ToPoLsuport" class="btn btn-secondary">
+                        <i class="fas fa-question-circle"></i>
+                        راهنمایی رایگان
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <img 
+                        src="./mich.svg" 
+                        alt="ToPoL Image" 
+                        class="main-image"
+                        loading="lazy"
+                    >
+                    <div class="floating-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="floating-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="floating-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="section-header">
+            <div class="section-subtitle">سرویس‌های ویژه</div>
+            <h2 class="section-title">پلن‌های اشتراک</h2>
+            <p class="section-description">
+                پلن‌های متنوع با توجه به نیاز شما. از گیمر مبتدی تا حرفه‌ای
+            </p>
+        </div>
+        
+        <div class="products-grid">
+            <!-- Silver Plan -->
+            <div class="product-card fade-in">
+                <div class="product-badge">پیشنهاد اقتصادی</div>
+                <div class="product-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="product-title">نقره‌ای</h3>
+                <p class="product-description">
+                    مناسب برای شروع و تست کیفیت سرویس
+                </p>
+                
+                <ul class="product-features">
+                    <li>سرعت بالا تا 100 مگابیت</li>
+                    <li>پشتیبانی 24 ساعته</li>
+                    <li>حجم ماهانه 30 گیگابایت</li>
+                    <li>اتصال نامحدود دستگاه همزمان</li>
+                    <li>سرورهای بهینه شده</li>
+                </ul>
+                
+                <div class="product-price">
+                    89,000 <span>تومان / ماه</span>
+                </div>
+                
+                <div class="product-buttons">
+                    <a href="https://t.me/ToPoLvpnbot" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-shopping-cart"></i>
+                        خرید اشتراک
+                    </a>
+                    <a href="https://t.me/ToPoLsuport" class="btn btn-outline btn-sm">
+                        اطلاعات بیشتر
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Gold Plan -->
+            <div class="product-card fade-in">
+                <div class="product-badge">پرفروش‌ترین</div>
+                <div class="product-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <h3 class="product-title">طلایی</h3>
+                <p class="product-description">
+                    بهترین انتخاب برای گیمرهای حرفه‌ای
+                </p>
+                
+                <ul class="product-features">
+                    <li>سرعت بسیار بالا تا 200 مگابیت</li>
+                    <li>پشتیبانی VIP</li>
+                    <li>حجم ماهانه 50 گیگابایت</li>
+                    <li>اتصال نامحدود دستگاه همزمان</li>
+                    <li>اولویت در سرورها</li>
+                </ul>
+                
+                <div class="product-price">
+                    135,000 <span>تومان / ماه</span>
+                </div>
+                
+                <div class="product-buttons">
+                    <a href="https://t.me/ToPoLvpnbot" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-shopping-cart"></i>
+                        خرید اشتراک
+                    </a>
+                    <a href="https://t.me/ToPoLsuport" class="btn btn-outline btn-sm">
+                        اطلاعات بیشتر
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Platinum Plan -->
+            <div class="product-card fade-in">
+                <div class="product-badge">پیشنهاد ویژه</div>
+                <div class="product-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h3 class="product-title">پلاتین</h3>
+                <p class="product-description">
+                    تجربه‌ای بی‌نظیر برای تیم‌های گیمینگ
+                </p>
+                
+                <ul class="product-features">
+                    <li>سرعت نامحدود</li>
+                    <li>پشتیبانی اختصاصی</li>
+                    <li>حجم ماهانه 70 گیگابایت</li>
+                    <li>اتصال نامحدود دستگاه همزمان</li>
+                    <li>سرورهای اختصاصی گیمینگ</li>
+                </ul>
+                
+                <div class="product-price">
+                    175,000 <span>تومان / ماه</span>
+                </div>
+                
+                <div class="product-buttons">
+                    <a href="https://t.me/ToPoLvpnbot" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-shopping-cart"></i>
+                        خرید اشتراک
+                    </a>
+                    <a href="https://t.me/ToPoLsuport" class="btn btn-outline btn-sm">
+                        اطلاعات بیشتر
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Diamond Plan -->
+            <div class="product-card fade-in">
+                <div class="product-badge">پریمیوم</div>
+                <div class="product-icon">
+                    <i class="fas fa-infinity"></i>
+                </div>
+                <h3 class="product-title">دایمند</h3>
+                <p class="product-description">
+                    کامل‌ترین پکیج برای نیازهای حرفه‌ای
+                </p>
+                
+                <ul class="product-features">
+                    <li>سرعت ابری</li>
+                    <li>پشتیبانی خصوصی</li>
+                    <li>حجم نامحدود</li>
+                    <li>اتصال نامحدود دستگاه همزمان</li>
+                    <li>دسترسی به تمام سرورها</li>
+                </ul>
+                
+                <div class="product-price">
+                    240,000 <span>تومان / ماه</span>
+                </div>
+                
+                <div class="product-buttons">
+                    <a href="https://t.me/ToPoLvpnbot" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-shopping-cart"></i>
+                        خرید اشتراک
+                    </a>
+                    <a href="https://t.me/ToPoLsuport" class="btn btn-outline btn-sm">
+                        اطلاعات بیشتر
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="section-header">
+            <div class="section-subtitle">تیم حرفه‌ای ما</div>
+            <h2 class="section-title">اعضای تیم</h2>
+            <p class="section-description">
+                تیمی متشکل از متخصصین شبکه و گیمینگ در خدمت شماست
+            </p>
+        </div>
+        
+        <div class="team-grid">
+            <div class="team-card fade-in">
+                <div class="team-avatar">
+                    <div class="team-avatar-inner">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+                <h3 class="team-name">میچ</h3>
+                <div class="team-role">مدیر فنی و توسعه‌دهنده</div>
+                <p class="team-description">
+                    مسئول توسعه سرویس‌ها و بهینه‌سازی سرورها
+                </p>
+            </div>
+            
+            <div class="team-card fade-in">
+                <div class="team-avatar">
+                    <div class="team-avatar-inner">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                </div>
+                <h3 class="team-name">امین</h3>
+                <div class="team-role">مدیر پشتیبانی</div>
+                <p class="team-description">
+                    پاسخگویی و راهنمایی مشتریان به صورت 24/7
+                </p>
+            </div>
+          
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <div class="section-subtitle">درباره ما</div>
+            <h2 class="section-title">ما کی هستیم؟</h2>
+            <p class="section-description">
+                تیمی متعهد به ارائه بهترین سرویس رفع تحریم برای جامعه گیمینگ ایران
+            </p>
+        </div>
+        
+        <div class="contact-container fade-in">
+            <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--light);">
+                مأموریت ما
+            </h3>
+            <p style="color: var(--gray); margin-bottom: 2rem; font-size: 1.1rem;">
+                ما در متا باور داریم که هر گیمر ایرانی باید بتواند بدون محدودیت 
+                و با بهترین کیفیت، در دنیای گیمینگ جهانی حضور داشته باشد. 
+                با استفاده از تکنولوژی‌های روز و سرورهای اختصاصی، سرویسی ارائه می‌دهیم 
+                که نه‌تنها نیازهای فنی شما را برآورده می‌کند، بلکه تجربه‌ای لذت‌بخش از گیمینگ را برای شما به ارمغان می‌آورد.
+            </p>
+            
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h4>پشتیبانی تلگرام</h4>
+                    <p>@ToPoLvpnbot</p>
+                    <a href="https://t.me/ToPoLsuport" class="btn btn-primary btn-sm" target="_blank">
+                        ارتباط مستقیم
+                    </a>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>ساعات پاسخگویی</h4>
+                    <p>24 ساعت شبانه‌روز</p>
+                    <p style="color: var(--success); font-weight: 600;">
+                        <i class="fas fa-check-circle"></i> همیشه در دسترس
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>m3ta</h3>
+                <p style="color: var(--gray); margin-bottom: 1.5rem;">
+                    ارائه دهنده سرویس‌های رفع تحریم تخصصی برای گیمرهای ایرانی
+                </p>
+                <div class="social-links">
+                    <a href="https://t.me/ToPoLsuport" class="social-link" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>لینک‌های سریع</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">خانه</a></li>
+                    <li><a href="#products">پلن‌ها</a></li>
+                    <li><a href="#team">تیم</a></li>
+                    <li><a href="#about">درباره ما</a></li>
+                    <li><a href="#contact">تماس با ما</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>سرویس‌ها</h3>
+                <ul class="footer-links">
+                    <li><a href="#products">اشتراک نقره‌ای</a></li>
+                    <li><a href="#products">اشتراک طلایی</a></li>
+                    <li><a href="#products">اشتراک پلاتین</a></li>
+                    <li><a href="#products">اشتراک دایمند</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>تماس با ما</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-headset" style="color: var(--primary);"></i> پشتیبانی 24/7</li>
+                    <li><i class="fab fa-telegram" style="color: var(--primary);"></i> تلگرام: @ToPoLvpnbot</li>
+                    <li><i class="fas fa-envelope" style="color: var(--primary);"></i> ایمیل: contact@m3ta.ir</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 تمامی حقوق برای تیم متا محفوظ است.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+                این سرویس صرفاً برای استفاده‌های قانونی و آموزشی ارائه شده است.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        // Check on load and scroll
+        window.addEventListener('load', fadeInOnScroll);
+        window.addEventListener('scroll', fadeInOnScroll);
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add hover effect to product cards
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+        
+        // Performance optimization
+        window.addEventListener('load', () => {
+            // Remove loading animation after page loads
+            setTimeout(() => {
+                document.body.style.overflow = 'auto';
+            }, 500);
+        });
+        
+        // Initialize animations
+        fadeInOnScroll();
+    </script>
+</body>
 </html>
