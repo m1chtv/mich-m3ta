@@ -1,6 +1,6 @@
 # mich-m3ta
 
-🚀 **maxgamingir** is a modern, responsive, dark-themed static website for selling V2Ray VPN subscriptions.  
+🚀 **M3ta** is a modern, responsive, dark-themed static website for selling V2Ray VPN subscriptions.  
 Built with HTML, CSS, and FontAwesome icons, it offers an elegant glassmorphism design and smooth UX tailored for tech-savvy users.
 
 ---
